@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="img/logo.png" alt="logo de la Barberia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <label for="nombreapellido">Nombre y Apellido</label> <!--Refiere al input y aparecerá en pantalla. Es una etiqueta para la entrada de datos para el input-->
+                <input type="text" id="nombreapellido" class="input-padron" required> <!--Crea caja de texto para que usuario escriba-->
+
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" cols="70" rows="10" class="input-padron" required></textarea> <!--Caja de texto especial que me permite alterar sus dimensiones-->
+
+                <fieldset>
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+                
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería?</label> <!--Estrategía para evitar usar id al relacionar label con input-->
+                
+                <input type="submit" value="Enviar formulario" class="enviar"> <!--Botón enviar. Para garantizar que independientemente del idioma del navegador, se muestre en español, coloco "value"-->
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th> <!--<th> para celdas del título-->
+                        <th>Horario</th> <!--<th> para celdas del título-->
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08hs - 20hs</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08hs - 20hs</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08hs - 20hs</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+
+        <footer>
+            <img src="img/logo-blanco.png" alt="logo de la Barberia Alura">
+            <p class="copyright">&copy; Copyright Barbería Alura - 2023</p> 
+        </footer>
+    </body>
+</html>
